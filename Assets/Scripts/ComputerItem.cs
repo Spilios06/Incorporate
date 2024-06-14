@@ -12,28 +12,28 @@ public class ComputerItem : InteractableObject{
     private float newViewportSize;
     private float startTime;
     private bool turnedOn = false;
-    public enum ComputerState{ DEFAULT, FIRST, SECOND, THIRD }
-    public void switchState(ComputerState computerState){
+    public int computerState = 0;
+    public void switchState(){
         switch (computerState){
-            case ComputerState.DEFAULT:
+            case 0:
                 GetComponent<SpriteRenderer>().sprite = computerDefaultState;
                 keyboard.GetComponent<SpriteRenderer>().sprite = keyboardDefaultState;
                 mouse.GetComponent<SpriteRenderer>().sprite = mouseDefaultState;
                 deskPhone.GetComponent<SpriteRenderer>().sprite = deskPhoneDefaultState;
                 break;
-            case ComputerState.FIRST:
+            case 1:
                 GetComponent<SpriteRenderer>().sprite = computerStageOne;
                 keyboard.GetComponent<SpriteRenderer>().sprite = keyboardStageOne;
                 mouse.GetComponent<SpriteRenderer>().sprite = mouseStageOne;
                 deskPhone.GetComponent<SpriteRenderer>().sprite = deskPhoneStageOne;
                 break;
-            case ComputerState.SECOND:
+            case 2:
                 GetComponent<SpriteRenderer>().sprite = computerStageTwo;
                 keyboard.GetComponent<SpriteRenderer>().sprite = keyboardTwo;
                 mouse.GetComponent<SpriteRenderer>().sprite = mouseStageTwo;
                 deskPhone.GetComponent<SpriteRenderer>().sprite = deskPhoneStageTwo;
                 break;
-            case ComputerState.THIRD:
+            case 3:
                 GetComponent<SpriteRenderer>().sprite = computerStageThree;
                 deskPhone.GetComponent<SpriteRenderer>().sprite = deskPhoneStageThree;
                 break;

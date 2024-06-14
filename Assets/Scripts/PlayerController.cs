@@ -2,21 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour{
-    private float sanityMeter = 0f;
-    void Start(){
-        
-    }
+    [SerializeField] private ComputerItem computer;
+    public float sanityMeter = 0f;
     void Update(){
         if(sanityMeter >= 100) gameOver();
     }
-    public void setSanityMeter(int value){ sanityMeter = value; }
-    public void gradualSanityIncrease(){
-        sanityMeter += 2 * Time.deltaTime;
-    }
-    public void gradualSanityDecrease(){
-        sanityMeter -= 1 * Time.deltaTime;
-    }
     public void gameOver(){
         
+    }
+    public void cleanSpread(){
+        computer.computerState -= 1;
+        computer.switchState();
     }
 }
