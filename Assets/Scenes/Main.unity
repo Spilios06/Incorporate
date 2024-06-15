@@ -231,7 +231,7 @@ MonoBehaviour:
   LoadEvent: 1
   UnloadEvent: 0
   Banks:
-  - Test
+  - Main
   CollisionTag: 
   PreloadSamples: 0
 --- !u!1 &299361514
@@ -810,6 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781492179}
   - component: {fileID: 781492180}
+  - component: {fileID: 781492181}
   m_Layer: 0
   m_Name: TestTrigger
   m_TagString: Untagged
@@ -851,12 +852,43 @@ MonoBehaviour:
       Data2: 1308664505
       Data3: -592097888
       Data4: 1464993477
-    Path: event:/ComputerBG/BG_ComputerHum
+    Path: event:/BG/ComputerBG/BG_ComputerHum
   Event: 
   PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 1
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &781492181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781492178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -733979989
+      Data2: 1321608786
+      Data3: 1132611971
+      Data4: -1673988125
+    Path: event:/BG/CreakyWoodBG
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
