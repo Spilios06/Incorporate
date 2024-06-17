@@ -550,7 +550,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Desktop/Master
+  - Desktop/Master
   Banks:
+  - Desktop/Main
   - Desktop/Main
   BanksToLoad:
   - Main
