@@ -40,17 +40,10 @@ public class ComputerItem : InteractableObject{
         }
     }
     public override void Interact(){
-        //StartCoroutine(zoomIn());
         onTriggerEvent.Invoke();
     }
-    private IEnumerator zoomIn(){
-        startTime = Time.time;
-        while (Time.time < startTime + 0.5f){
-            float t = (Time.time - startTime) / 0.5f;
-            float newViewportSize = Mathf.Lerp(5.392406f, minViewportSize, t);
-            playerCamera.orthographicSize = newViewportSize;
-            yield return null;
-        }
-        playerCamera.orthographicSize = 5.392406f;
+    public void setState(int state){
+        computerState = state;
+        switchState();
     }
 }
